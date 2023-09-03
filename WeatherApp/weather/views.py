@@ -3,7 +3,7 @@ from django.shortcuts import render
 import datetime
 
 def index(request):
-    API_KEY = 'af370db6334bf8b6d75d9de4673b6b05'
+    API_KEY = 'your api_key'
     url = 'https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=' + API_KEY
 
     if(request.method == 'POST'):
