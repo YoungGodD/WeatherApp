@@ -19,7 +19,7 @@ Clone the project
 Install dependencies
 ```bush
 
-  pip install -r requirements.txt
+  source venvmac/bin/activate
 
 ```
 Now open `views.py` file which is in `Weather/views.py` and enter your openweathermap `api_key` in `API_KEY = "your api_key"` section and save the file
