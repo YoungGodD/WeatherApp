@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <div><i class="bi bi-brightness-high"></i> <strong>WeatherApp</strong></div>
+            </a>
+        </div>
+    </div>
+    <section class="vh-100" style="background-color: #4B515D;">
+        <div class="container py-5 h-100">
+
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+                <div class="d-flex flex-column text-center mt-5 mb-2">
+                    <h1><span class="display-5 fw-bold text-body-emphasis">Weather today</span></h1><br>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form.name }}
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" placeholder="Enter your city" name="City" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><br>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card" style="color: #4B515D; border-radius: 35px;">
+                    <div class="card-body p-4">
+
+                        <div class="d-flex">
+                            <h6 class="flex-grow-1">City</h6>
+                        </div>
+
+                        <div class="d-flex flex-column align-items-center mt-5 mb-4">
+                            <img src="https://img.icons8.com/?size=512&id=24203&format=png" alt="error" height="100px" width="100px">
+                            <span class="small" style="color: #868B94">Page not found</span>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1" style="font-size: 1rem;">
+                                <div><i class="bi bi-wind"></i><span class="ms-1"> - m/s </span></div>
+                                <div><i class="bi bi-thermometer"></i><span class="ms-1">min - <sup>o</sup>C</span></div>
+                                <div><i class="bi bi-thermometer-high"></i><span class="ms-1">max - <sup>o</sup>C</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </section>
+</body>
+</html>
